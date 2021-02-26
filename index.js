@@ -20,7 +20,7 @@ for(;i1<=inpText.length-1;i1++) {
     if (latters.indexOf(inpText[i1]) != -1) { //  Если такой буквы в (русском) словаре нет, то мы просто её пропускаем
         
         //  Смотрим, какая по счёту буква в тексте и складываем это с буквой по счёту в пароле, добавляем 2, так как это всё массивы, и вычитаем 1, тк использоваться всё этто опять же будет в массиве
-        out = latters.indexOf(inpText[i1]) + latters.indexOf(codeword[i2]) + 1 > latters.length ? //  Сравниваем с количеством букв в алфавите
+        out = latters.indexOf(inpText[i1]) + latters.indexOf(codeword[i2]) + 1 > latters.length - 1 ? //  Сравниваем с количеством букв в алфавите
             latters.indexOf(inpText[i1]) + latters.indexOf(codeword[i2]) - 32 : //  Если полученная цифра больше чем количество букв в алфавите, то вычитаем 33. 1 - 33 = 32
             latters.indexOf(inpText[i1]) + latters.indexOf(codeword[i2]) + 1; //  Иначе ничего не делаем
         
